@@ -229,6 +229,26 @@ button:hover {
 }
 
 
+.cancons_pantalla_jugar{
+    font-size: 17px;
+    height: 50%;
+    width: 40%;
+    background-color: rgba(100, 104, 107, 0.904);
+    color: whitesmoke;
+    font-family: 'Press Start 2P';
+    border-radius: 15px;
+
+}
+
+
+.caratula_canco_jugar{
+    border-radius: 15px;
+    width: 5em;
+    height: 5em;
+    
+}
+
+
 /*BODY*/
 body{
     background-image: url("Img/Fondo_coche.gif");

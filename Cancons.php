@@ -42,8 +42,10 @@ $contents = json_decode($json, true);
     <body>
         <?php foreach($contents as $Canco){ ?>
             <p>
-        <img src="<?php echo $Canco["Caratula:"];?>" >
-        <?php echo $Canco["Titol:"]; ?>
+        <img class="caratula_canco_jugar"src="Uploads/imatge/<?php echo $Canco["Caratula:"];?>">
+        <div class="cancons_pantalla_jugar">
+        <?php echo $Canco["Titol:"];?>
+        </div>
         </p>
         <?php } ?>
     </body>
