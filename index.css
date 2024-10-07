@@ -1,0 +1,268 @@
+/*IMPORTEM ELS TIPUS DE LLETRES QUE VOLEM*/
+@font-face {
+        font-family: 'Press Start 2P';
+        src: url('fuente/PressStart2P-Regular.ttf') format('truetype');}
+
+
+/*Head*/
+header {
+    display: flex;
+    background-size: 26%;
+    background-repeat: no-repeat;
+    size:20%;
+    justify-content: flex-start;    
+    text-align: left; 
+}
+
+
+/*Menu y classe menu*/
+.Menu{
+    display: flex; /*utilitzem flex per centrar*/
+    flex-direction: column; /*fem que els elements s'agrupin en mode columa vertical*/
+    justify-content: center; /*centrem horitzontalment*/
+    align-items: center; /*centrem verticalment*/
+    height: 100vh;
+    gap: 15px;
+    margin-top: -100px;
+    font: 'press start 2p';
+    color:whitesmoke;   
+}
+
+
+/*TOTS ELS TITOLS EN H1*/
+h1{
+    font-size: 60px;
+}
+
+
+/*AFEGIR CANCONS*/
+.song{
+    color: whitesmoke;
+    font-family: 'press start 2p';
+    font-size: 25px;
+    text-align: center;  
+    background-color: rgba(0, 0, 0, 0.494);
+    border: 0.1em solid pink;
+    border-radius: 1em;
+    width: 900px;
+    padding-top: 1%;
+    margin: 0 auto;
+    margin-top: -20px;
+}
+
+
+/*Llista de AFEGIR CANCONS*/
+.song_ul_li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 8px;
+    margin-top: -10px;
+}
+
+
+/*Llista de cancons*/
+.song_ul{
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+    unicode-bidi: isolate;
+}
+
+
+/*BOTÓ AFEGIR CANCÓ*/
+.button_add_song{
+    font-size: 30px;
+    padding: 5px 70px;
+    background-color: rgba(100, 104, 107, 0.904);
+    color: whitesmoke;
+    font-family: 'Press Start 2P';
+    border-radius: 5px;
+}
+
+
+/*Llista de LLISTA DE CANCONS*/
+.listsong_ul{
+    background-color: rgba(0, 0, 0, 0.494);
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 1em;
+    border: 0.1em solid pink;
+    border-radius: 1em;
+    gap: 10px;
+}
+
+
+/*LOGO STEPMANIA DEL MENÚ PRINICIPAL*/
+.logomenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 120px;
+    color: whitesmoke;
+    font-family: 'press start 2p';
+}
+
+
+/*TOTS ELS BOTONS EN CLASSE BUTON*/
+.button{
+    font-size: 35px;
+    padding: 7px 70px;
+    background-color: rgba(100, 104, 107, 0.904);
+    color: whitesmoke;
+    font-family: 'Press Start 2P';
+    align-items: center;
+    border-radius: 5px;
+}
+
+
+/*BOTÓ HOME*/
+.buttonhome{
+    display: inline-block;
+    width: 3em;
+    height: 3em;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath stroke-dasharray='16' stroke-dashoffset='16' d='M5 21h14'%3E%3Canimate fill='freeze' attributeName='stroke-dashoffset' dur='0.2s' values='16;0'/%3E%3C/path%3E%3Cpath stroke-dasharray='14' stroke-dashoffset='14' d='M5 21v-13M19 21v-13'%3E%3Canimate fill='freeze' attributeName='stroke-dashoffset' begin='0.2s' dur='0.2s' values='14;0'/%3E%3C/path%3E%3Cpath stroke-dasharray='28' stroke-dashoffset='28' d='M2 10l10 -8l10 8'%3E%3Canimate fill='freeze' attributeName='stroke-dashoffset' begin='0.4s' dur='0.6s' values='28;0'/%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+        
+}
+
+
+/*BOTÓ RETURN*/
+.buttonreturn{
+    display: inline-block;
+    width: 3em;
+    height: 3em;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cg fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='4'%3E%3Cpath d='m13 8l-7 6l7 7'/%3E%3Cpath d='M6 14h22.994c6.883 0 12.728 5.62 12.996 12.5c.284 7.27-5.723 13.5-12.996 13.5H11.998'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+
+/*BOTÓ PREGUNTA*/
+.buttonedit{
+    display: inline-block;
+    width: 3em;
+    height: 3em;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath stroke-dasharray='20' stroke-dashoffset='20' d='M3 21h18'%3E%3Canimate fill='freeze' attributeName='stroke-dashoffset' dur='0.2s' values='20;0'/%3E%3C/path%3E%3Cpath stroke-dasharray='48' stroke-dashoffset='48' d='M7 17v-4l10 -10l4 4l-10 10h-4'%3E%3Canimate fill='freeze' attributeName='stroke-dashoffset' begin='0.2s' dur='0.6s' values='48;0'/%3E%3C/path%3E%3Cpath stroke-dasharray='8' stroke-dashoffset='8' d='M14 6l4 4'%3E%3Canimate fill='freeze' attributeName='stroke-dashoffset' begin='0.8s' dur='0.2s' values='8;0'/%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+}
+
+
+/*BOTONS HOME I RETURN*/
+.Botonshomereturn{
+    justify-content: right;
+    flex-direction: row;
+    display: flex;
+}
+
+
+/*BOTÓ HOME NOMÉS*/
+.Botohome_classificacions{
+    justify-content: right;
+    flex-direction: row;
+    display: flex;
+}
+
+/**/
+.titolcancons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*TOTS ELS BOTONS*/
+button{
+    font-size: 35px;
+    padding: 7px 70px;
+    background-color: rgba(100, 104, 107, 0.904);
+    color: whitesmoke;
+    font-family: 'Press Start 2P';
+    border-radius: 5px;
+}
+
+
+/*DEL BOTÓ JUGAR*/
+.btn-jugar{
+    padding: 7px 185px;
+}
+
+
+/*DEL BOTÓ CLASSIFICACIONS*/
+.btn-classificacions{
+    padding: 7px 10px;
+}
+
+
+/*DEL BOTÓ CANCONS*/
+.btn-song{
+    padding: 7px 150px;    
+}
+
+
+/*FONS DELS BOTONS*/
+button:hover {
+    background-color: rgba(100, 104, 107, 0.359);
+    cursor: pointer;
+}
+
+
+/*BOTÓ DE JUGAR EN Cancons.php*/
+.jugarcancons{
+    padding: 7px 170px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*BODY*/
+body{
+    background-image: url("Img/Fondo_coche.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/*FEM UN BOTÓ JUGAR EN Cancons.php*/
+.btn-jugar-cancons{
+    align-items: center;
+}
+
+
+/*FEM UN CONTENIDOR QUE CONTINDRÀ btn-jugar*/
+.boto_foot_cancons { 
+    display: flex;            
+    justify-content: center;  
+    align-items: center;      
+    position: absolute;       
+    bottom: 20px;             
+    width: 99%;
+    
+}
+
+
+.song_list_ul{
+    font-family: 'Press Start 2P';
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    margin-top: 0;
+}
