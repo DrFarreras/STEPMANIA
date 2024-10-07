@@ -20,7 +20,7 @@
 
         <ul class="song_ul">
             
-            <li class="song_ul_li">Títol<textarea type="text" name="titol" rows="2" cols="50" required></textarea><br></li>
+            <li class="song_ul_li">Títol<textarea type="text" name="titol" rows="2" cols="50" input maxlength="15" required></textarea><br></li>
             <li class="song_ul_li">Artista<textarea type="text" name="artista" rows="2" cols="50" required></textarea><br></li>
             <li class="song_ul_li">Música (.mp3)<input type="file" name="fmusic" id="fmusic" accept="audio/*" required><br></li>
             <li class="song_ul_li">Caràtula<input type="file" name="fcarat" accept="image/*" required><br></li>
