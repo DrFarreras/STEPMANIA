@@ -233,12 +233,16 @@ button:hover {
     font-size: 20px;
     width: 10em;
     height:9px;
-    padding: 3.5em 1em;
+    padding: 15px 1px;
     background-color: rgba(5, 156, 138, 0.471);
     color: whitesmoke;
     font-family: 'Press Start 2P';
     border-radius: 2px;
-    align-items: center;}
+    text-align: center;   
+    flex-direction: row;
+    margin-left: 22%;
+    margin-top: 1em;
+}
 
 
 .lista_pantalla_jugar{
@@ -249,10 +253,9 @@ button:hover {
     height: 29em;
     overflow-y: auto;
     overflow-x: hidden;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: 200px 20px 50em;
+
 }
 
 
@@ -260,12 +263,13 @@ button:hover {
     border-radius: 8px;
     width: 7.5em;
     height: 7.5em;
-    display: flex;
     border: 0.15em solid rgba(137, 43, 226, 0.378);
-    align-items: flex-end;
-    text-align: right;
-    flex-direction: row;
-    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1em;
+    display: flex;
 }
 
 
