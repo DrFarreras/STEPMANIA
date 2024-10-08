@@ -41,14 +41,14 @@ $contents = json_decode($json, true);
 <html>
     <body>
         <div class="lista_pantalla_jugar">
-        <?php foreach($contents as $Canco){ ?>
-            <p>
-        <img class="caratula_canco_jugar"src="Uploads/imatge/<?php echo $Canco["Caratula:"];?>">
-        <div class="cancons_pantalla_jugar">
-        <?php echo $Canco["Titol:"];?>
-        </div>
-        </p>
-        <?php } ?>
+            <?php foreach($contents as $Canco){ ?>
+                <p>
+            <img class="caratula_canco_jugar"src="Uploads/imatge/<?php echo $Canco["Caratula:"];?>">
+                <div class="cancons_pantalla_jugar">
+                    <?php echo $Canco["Titol:"];?>
+                </div>
+                </p>
+            <?php } ?>
         </div>
     </body>
 </html>

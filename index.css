@@ -230,38 +230,42 @@ button:hover {
 
 
 .cancons_pantalla_jugar{
-    font-size: 10px;
-    width: 15em;
-    padding: 0.2em 1em;
+    font-size: 20px;
+    width: 10em;
+    height:9px;
+    padding: 3.5em 1em;
     background-color: rgba(5, 156, 138, 0.471);
     color: whitesmoke;
     font-family: 'Press Start 2P';
     border-radius: 2px;
-    align-items: center;
-}
+    align-items: center;}
 
 
 .lista_pantalla_jugar{
     background-color: rgba(0, 0, 0, 0.494);
     border: 0.1em solid pink;
     border-radius: 1em;
-    width: 20em;
+    width: 100%;
     height: 29em;
-
+    overflow-y: auto;
+    overflow-x: hidden;
     text-align: center;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-start;
 }
 
 
 .caratula_canco_jugar{
     border-radius: 8px;
-    width: 4em;
-    height: 4em;
+    width: 7.5em;
+    height: 7.5em;
     display: flex;
     border: 0.15em solid rgba(137, 43, 226, 0.378);
-    align-items: flex-start;
+    align-items: flex-end;
+    text-align: right;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 
 
