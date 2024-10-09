@@ -12,7 +12,8 @@
     </div>
     <div class="classificacions_taula_punts">
         <div class="jugador_classificacio">JUGADOR</div><br>
-        <div class="puntuacio_classificacio">PUNTUACIÓ</div>
+        <div class="puntuacio_classificacio">PUNTUACIO</div>
+        <div class="linea_classificacio"></div>
     </div>
 </body>
 </html>

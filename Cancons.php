@@ -43,10 +43,8 @@ $contents = json_decode($json, true);
                     <img class="caratula_canco_jugar"src="Uploads/imatge/<?php echo $Canco["Caratula:"];?>">
                 
                 <div class="cancons_pantalla_jugar">
-                    <?php echo $Canco["Titol:"];?>
-                </div>
-                
-                
+                    <?php echo $Canco["Titol:"];?><br><?php echo $Canco["Artista:"];?>
+                </div>                
             <?php } ?>
         </div>
         <div class="boto_foot_cancons"> 

@@ -285,20 +285,40 @@ button:hover {
     border-radius: 1em;
     width: 50%;
     height: 25em;
+    flex-direction: row;
     overflow-y: auto;
     overflow-x: hidden;
-    margin: 0 auto; /* el 0 es dels marges superior i inferior, i el auto de esquerra i dreta, es fa per centrar */
+    margin: 0 auto; /*el 0 es dels marges superior i inferior, i el auto de esquerra i dreta, es fa per centrar*/
+    gap: 90px;
 }
 
 
+/*LINEA DE LA TAULA DE CLASSIFICACIO*/
+.linea_classificacio{    
+    position: absolute;
+    left: 50%; /*centrar horitzontalment*/
+    top: 57px; /*separacio de la part mes alta de la pagina per que comenci dins del cuadre*/
+    bottom: 46px; /*separacio del fons de la pagina per que comenci dins del cuadre*/
+    width: 2px; /*ample de la linea*/
+    background-color: pink; /*color de la linea*/
+    transform: translateX(-50%); /*ajustar el centre*/    
+}
+
+
+/*EL TITOL JUGADOR DE LA TAULA CLASSIFICACIO*/
 .jugador_classificacio{
     margin-top: 1em;
-    
+    margin-left: 3.5em;
+    text-decoration: underline;
 }
 
 
+/*EL TITOL PUNTUACIO DE LA TAULA CLASSIFICACIO*/
 .puntuacio_classificacio{
     margin-top: 1em;
+    margin-right: 3.5em;
+    text-decoration: underline;
+
 }
 
 
@@ -330,6 +350,7 @@ body{
 }
 
 
+/*LLISTA SONG*/
 .song_list_ul{
     font-family: 'Press Start 2P';
     color: whitesmoke;
