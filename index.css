@@ -229,22 +229,21 @@ button:hover {
 }
 
 
+/*TITOL DE LES CANCONS*/
 .cancons_pantalla_jugar{
     font-size: 20px;
-    width: 10em;
-    height:9px;
-    padding: 15px 1px;
-    background-color: rgba(5, 156, 138, 0.471);
+    width: 20em;
+    padding: 1em;
     color: whitesmoke;
     font-family: 'Press Start 2P';
     border-radius: 2px;
-    text-align: center;   
-    flex-direction: row;
+    text-align: left;   
+    flex-direction: column;
     margin-left: 22%;
-    margin-top: 1em;
 }
 
 
+/*RECUADRE ON ESTAN LES CANCONS*/
 .lista_pantalla_jugar{
     background-color: rgba(0, 0, 0, 0.494);
     border: 0.1em solid pink;
@@ -254,11 +253,11 @@ button:hover {
     overflow-y: auto;
     overflow-x: hidden;
     display: grid;
-    grid-template-columns: 200px 20px 50em;
-
+    grid-template-columns:  200px 10px;
 }
 
 
+/*CARATULA DE LES CANCONS*/
 .caratula_canco_jugar{
     border-radius: 8px;
     width: 7.5em;
@@ -270,6 +269,36 @@ button:hover {
     justify-content: center;
     margin-left: 1em;
     display: flex;
+    margin-top: 1em;
+
+}
+
+
+/*TAULA DE LA CLASSIFICACIO*/
+.classificacions_taula_punts{
+    color: whitesmoke;
+    font-size: 25px;
+    font-family: 'Press Start 2P';
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.494);
+    border: 0.1em solid pink;
+    border-radius: 1em;
+    width: 50%;
+    height: 25em;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 0 auto; /* el 0 es dels marges superior i inferior, i el auto de esquerra i dreta, es fa per centrar */
+}
+
+
+.jugador_classificacio{
+    margin-top: 1em;
+    
+}
+
+
+.puntuacio_classificacio{
+    margin-top: 1em;
 }
 
 

@@ -23,9 +23,7 @@
         
         
     </div>
-    <div class="boto_foot_cancons"> 
-        <button class="btn-jugar-cancons">JUGAR</button>
-    </div>
+    
     
 </body>
 </html>
@@ -48,7 +46,11 @@ $contents = json_decode($json, true);
                     <?php echo $Canco["Titol:"];?>
                 </div>
                 
+                
             <?php } ?>
+        </div>
+        <div class="boto_foot_cancons"> 
+            <button class="btn-jugar-cancons">JUGAR</button>
         </div>
     </body>
 </html>

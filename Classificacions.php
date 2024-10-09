@@ -10,6 +10,9 @@
     <div class="Botohome_classificacions">
         <a href='index.html' class="buttonhome"></a><br>
     </div>
-    
+    <div class="classificacions_taula_punts">
+        <div class="jugador_classificacio">JUGADOR</div><br>
+        <div class="puntuacio_classificacio">PUNTUACIÓ</div>
+    </div>
 </body>
 </html>
