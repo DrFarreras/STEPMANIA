@@ -229,6 +229,22 @@ button:hover {
 }
 
 
+/*NAV DE CANCONS*/
+.titols_lista_pantalla_jugar{
+    font-size: 17px;
+    width: 20em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    color: whitesmoke;
+    font-family: 'Press Start 2P';
+    border-radius: 2px;
+    text-align: left;
+    flex-direction: row;
+    display: flex;
+    gap: 8em;
+}
+
+
 /*TITOL DE LES CANCONS*/
 .cancons_pantalla_jugar{
     font-size: 20px;
@@ -248,12 +264,13 @@ button:hover {
     background-color: rgba(0, 0, 0, 0.494);
     border: 0.1em solid pink;
     border-radius: 1em;
-    width: 100%;
-    height: 29em;
+    width: 80%;
+    height: 28em;
     overflow-y: auto;
     overflow-x: hidden;
-    display: grid;
-    grid-template-columns:  200px 10px;
+    display: grid; 
+    grid-template-columns: repeat(3, 13.6em); 
+    margin-left: 9.6em;
 }
 
 
@@ -359,4 +376,34 @@ body{
     align-items: center;
     font-size: 40px;
     margin-top: 0;
+}
+
+.bloc_dreta_artista,
+.bloc_central_titol {
+    padding-top: 1em; 
+    box-sizing: border-box; 
+    text-align: center; 
+    font-size: 17px;
+    color: whitesmoke;
+    font-family: 'Press Start 2P';}
+
+
+.bloc_dreta,
+.bloc_central,
+.bloc_esquerra {
+    padding-top: 1em; 
+    box-sizing: border-box; 
+    text-align: center; 
+}
+
+.bloc_dreta_artista{
+    width: 400px;
+}
+
+.bloc_esquerra {
+    margin-left: 9.9em;
+}
+
+.bloc_dreta {
+    margin-left: 4em;
 }
