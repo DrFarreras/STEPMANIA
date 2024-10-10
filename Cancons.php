@@ -61,13 +61,22 @@ $contents = json_decode($json, true);
             <div class="bloc_dreta_artista">
                 <?php echo $Canco["Artista:"]; ?>
             </div>
-
+            <div class="buttonedit_delete_play">
+                <div class="boto_editar_pantalla_jugar">
+                    <a href='Modificarcancons.php' class="buttonedit"></a>
+                </div>
+                <div class="boto_borrar_pantalla_jugar">
+                    <a href="" class="buttondelete"></a>
+                </div>
+                <div class="boto_jugar_pantalla_jugar">
+                    <a href="" class="buttonplay"></a>
+                </div>
+            </div>
         <?php } ?>
     </div>
-    <div class="boto_foot_cancons">
-        <button class="btn-jugar-cancons">JUGAR</button>
-    </div>
+
 </body>
 
 
 </html>
+

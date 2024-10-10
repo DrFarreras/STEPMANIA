@@ -11,7 +11,7 @@
     <form action="Llistacancons.php" method="Post">
     
     <div class="Botonshomereturn">
-    <a href='Afegircancons.php' class="buttonreturn"></a><br>
+    <a href='Cancons.php' class="buttonreturn"></a><br>
     <a href='index.html' class="buttonhome"></a><br>
     </div>
 

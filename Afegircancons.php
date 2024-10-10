@@ -10,7 +10,6 @@
 <body>
     <form action="Llistacancons.php" method="Post" enctype="multipart/form-data">
     <div class="Botonshomereturn">
-        <a href='Modificarcancons.php' class="buttonedit"></a><br>
         <a href='index.html' class="buttonhome"></a><br>
         
     </div>
