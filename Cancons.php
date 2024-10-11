@@ -50,20 +50,23 @@ $contents = json_decode($json, true);
 
 <body>
     <div class="lista_pantalla_jugar">
-        <?php foreach ($contents as $Canco) { ?>
+        <?php foreach ($contents as $canco) {
+            $titol=$canco["Titol:"];
+            $artista=$canco["Artista:"];
+            ?>
 
             <div class="bloc_esquerra_caratula">
-                <img class="caratula_canco_jugar" src="Uploads/imatge/<?php echo $Canco["Caratula:"]; ?>">
+                <img class="caratula_canco_jugar" src="Uploads/imatge/<?php echo $canco["Caratula:"]; ?>">
             </div>
             <div class="bloc_central_titol">
-                <?php echo $Canco["Titol:"]; ?><br>
+                <?php echo $canco["Titol:"]; ?><br>
             </div>
             <div class="bloc_dreta_artista">
-                <?php echo $Canco["Artista:"]; ?>
+                <?php echo $canco["Artista:"]; ?>
             </div>
             <div class="buttonedit_delete_play">
                 <div class="boto_editar_pantalla_jugar">
-                    <a href='Modificarcancons.php' class="buttonedit"></a>
+                    <a href='Afegircancons.php?titol=<?=$titol?>&artista=<?=($artista)?>' class="buttonedit"></a>
                 </div>
                 <div class="boto_borrar_pantalla_jugar">
                     <a href="" class="buttondelete"></a>

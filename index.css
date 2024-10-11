@@ -62,6 +62,27 @@ h1{
 }
 
 
+.song_ul_li_titol{
+    width: 28.5em;
+    height: 2em;
+    text-align: center;
+}
+
+
+.song_ul_li_artista{
+    width: 28.5em;
+    height: 2em;
+    text-align: center;
+}
+
+
+.song_ul_li_descripcio{
+    width: 28.5em;
+    height: 4em;
+    text-align: center;
+}
+
+
 /*Llista de cancons*/
 .song_ul{
     display: block;

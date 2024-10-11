@@ -1,34 +1,26 @@
 [
     {
-        "ID": "16707e90790d44",
-        "Titol:": "PISCINA",
-        "Artista:": "MARIA BECERRA",
+        "ID": "16709308a5ab09",
+        "Titol:": "Automatico",
+        "Artista:": "Maria Becerra",
         "Caratula:": "img1.jpg",
         "Joc:": "joc1.jpg",
         "Canco:": "canco1.mp3"
     },
     {
-        "ID": "16707e90d79d98",
-        "Titol:": "PISCINA",
-        "Artista:": "MARIA BECERRA",
+        "ID": "167093126b5948",
+        "Titol:": "ughfui",
+        "Artista:": "fuewhui",
         "Caratula:": "img2.jpg",
         "Joc:": "joc2.jpg",
         "Canco:": "canco2.mp3"
     },
     {
-        "ID": "16707e91005323",
-        "Titol:": "PISCINA",
-        "Artista:": "MARIA BECERRA",
+        "ID": "167093162d8615",
+        "Titol:": "fefef",
+        "Artista:": "efefe",
         "Caratula:": "img3.jpg",
         "Joc:": "joc3.jpg",
         "Canco:": "canco3.mp3"
-    },
-    {
-        "ID": "16707e9127ad6e",
-        "Titol:": "PISCINA",
-        "Artista:": "MARIA BECERRA",
-        "Caratula:": "img4.jpg",
-        "Joc:": "joc4.jpg",
-        "Canco:": "canco4.mp3"
     }
 ]
