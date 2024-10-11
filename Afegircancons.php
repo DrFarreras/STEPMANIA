@@ -1,20 +1,32 @@
-
 <?php
 // Archivo JSON
 $jsonFile = 'Data.json';
 
-// Leer el contenido del archivo JSON
+// Llegir el contingut de l'arxiu JSON
 $jsonData = file_get_contents($jsonFile);
 
-// Decodificar el JSON en un array asociativo de PHP
-$canco = json_decode($jsonData, true);
+// Decodificar el JSON en un array associatiu de PHP
+$Cancons = json_decode($jsonData, true);
 
-// Obtener el ID de la canción desde la URL
-$titol = isset($_GET['titol']) ? $_GET['titol'] : '';
-$artista = isset($_GET['artista']) ? $_GET['artista']: '';
+// Obtenir l'ID de la cançó des de la URL
+$id = isset($_GET['id']) ? $_GET['id'] : '';
+$titol = '';
+$artista = "";
 
-// Obtener la canción seleccionada según el ID
-$selectedSong = isset($canco[$titol]) ? $canco[$titol] : null;
+// Recorrem totes les cançons per trobar la que coincideix amb l'ID
+foreach ($Cancons as $canco) {
+    if ($canco["ID"] == $id) {
+        $titol = $canco["Titol:"];
+        $artista = $canco["Artista:"];
+    }
+}
+
+// Aquí es fa una substitució dels espais per &nbsp; per conservar-los a la URL
+$titol1 = str_replace(' ', '&nbsp;', $titol);
+$artist1 = str_replace(' ', '&nbsp;', $artista);
+?>
+
+
 ?>
 
 
@@ -30,8 +42,8 @@ $selectedSong = isset($canco[$titol]) ? $canco[$titol] : null;
 <body>
     <form action="Llistacancons.php" method="Post" enctype="multipart/form-data">
     <div class="Botonshomereturn">
+        <a href='Cancons.php' class="buttonlist"></a>
         <a href='index.html' class="buttonhome"></a><br>
-        
     </div>
     
     <div class="song">
@@ -39,12 +51,12 @@ $selectedSong = isset($canco[$titol]) ? $canco[$titol] : null;
 
         <ul class="song_ul">
             
-            <li class="song_ul_li">Títol<input class="song_ul_li_titol" type="text" name="titol" input maxlength="15" required value=<?=$titol?>></textarea><br></li>
-            <li class="song_ul_li">Artista<input class="song_ul_li_artista" type="text" name="artista" required value=<?=urldecode($artista)?>></textarea><br></li>
+            <li class="song_ul_li">Títol<input class="song_ul_li_titol" type="text" name="titol" input maxlength="25" required value=<?=$titol1?>></textarea><br></li>
+            <li class="song_ul_li">Artista<input class="song_ul_li_artista" type="text" name="artista" input maxlength="15" value=<?=($artist1)?>></textarea><br></li>
             <li class="song_ul_li">Música (.mp3)<input type="file" name="fmusic" id="fmusic" accept="audio/*" required value><br></li>
             <li class="song_ul_li">Caràtula<input type="file" name="fcarat" accept="image/*" required><br></li>
             <li class="song_ul_li">Fitxer de joc<input type="file" name="fjoc" accept="text" required><br></li>
-            <li class="song_ul_li">Descripció<input class="song_ul_li_descripcio" type="text" name="descripcio" rows="4" cols="50"></textarea><br></li>
+            <li class="song_ul_li">Descripció<input class="song_ul_li_descripcio" type="text" name="descripcio" rows="4" input maxlength="1000" cols="50"></textarea><br></li>
 
             <input type="submit" class="button_add_song" value="ENVIAR">
             

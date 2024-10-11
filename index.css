@@ -159,14 +159,14 @@ h1{
 }
 
 
-/*BOTÓ RETURN*/
-.buttonreturn{
+/*BOTÓ LLISTA*/
+.buttonlist{
     display: inline-block;
     width: 3em;
     height: 3em;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cg fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='4'%3E%3Cpath d='m13 8l-7 6l7 7'/%3E%3Cpath d='M6 14h22.994c6.883 0 12.728 5.62 12.996 12.5c.284 7.27-5.723 13.5-12.996 13.5H11.998'/%3E%3C/g%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath stroke-dasharray='72' stroke-dashoffset='72' d='M12 3h7v18h-14v-18h7Z'%3E%3Canimate fill='freeze' attributeName='stroke-dashoffset' dur='0.6s' values='72;0'/%3E%3C/path%3E%3Cpath stroke-dasharray='12' stroke-dashoffset='12' stroke-width='1' d='M14.5 3.5v3h-5v-3'%3E%3Canimate fill='freeze' attributeName='stroke-dashoffset' begin='0.7s' dur='0.2s' values='12;0'/%3E%3C/path%3E%3Cpath stroke-dasharray='4' stroke-dashoffset='4' d='M9 10h3'%3E%3Canimate fill='freeze' attributeName='stroke-dashoffset' begin='0.9s' dur='0.2s' values='4;0'/%3E%3C/path%3E%3Cpath stroke-dasharray='6' stroke-dashoffset='6' d='M9 13h5'%3E%3Canimate fill='freeze' attributeName='stroke-dashoffset' begin='1.1s' dur='0.2s' values='6;0'/%3E%3C/path%3E%3Cpath stroke-dasharray='8' stroke-dashoffset='8' d='M9 16h6'%3E%3Canimate fill='freeze' attributeName='stroke-dashoffset' begin='1.3s' dur='0.2s' values='8;0'/%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
 }
 
 
@@ -419,6 +419,7 @@ body{
     margin-top: 0;
 }
 
+
 .bloc_dreta_artista,
 .bloc_central_titol {
     padding-top: 1em; 
@@ -427,7 +428,7 @@ body{
     font-size: 17px;
     color: whitesmoke;
     font-family: 'Press Start 2P';
-    border-bottom: 0.1em solid pink;;}
+    border-bottom: 0.1em solid pink;}
 
 
 .bloc_dreta,
