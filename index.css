@@ -406,7 +406,7 @@ body{
     font-size: 17px;
     color: whitesmoke;
     font-family: 'Press Start 2P';
-    border: 0.1em solid pink;;}
+    border-bottom: 0.1em solid pink;;}
 
 
 .bloc_dreta,
