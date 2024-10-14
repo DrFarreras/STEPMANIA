@@ -46,7 +46,8 @@ if (isset($_GET['delete'])) {
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="Botohome_classificacions">
+    <div class="Botonshomereturn"> <!-- Fem un class dels botons enllaçats amb les seves pàgines corresponents-->
+        <a href='Afegircancons.php' class="buttonadd"></a><br>
         <a href='index.html' class="buttonhome"></a><br>
     </div>
 
@@ -91,8 +92,9 @@ if (isset($_GET['delete'])) {
                     <a href='Cancons.php?delete=<?= urlencode($canco["ID"]) ?>' class="buttondelete" onclick="return confirm('Vols eliminar aquesta cançó?')"></a>
                 </div>
                 <div class="boto_jugar_pantalla_jugar">
-                <a href="jugar.php" class="buttonplay"></a>
+                    <a href="jugar.php?id=<?= urlencode($canco["ID"]) ?>" class="buttonplay"></a>
                 </div>
+
             </div>
         <?php } ?>
     </div>

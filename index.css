@@ -181,6 +181,26 @@ h1{
 }
 
 
+.buttonreturn{
+    display: inline-block;
+    width: 3em;
+    height: 3em;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cg fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='4'%3E%3Cpath d='m13 8l-7 6l7 7'/%3E%3Cpath d='M6 14h22.994c6.883 0 12.728 5.62 12.996 12.5c.284 7.27-5.723 13.5-12.996 13.5H11.998'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+
+.buttonadd{
+    display: inline-block;
+    width: 3em;
+    height: 3em;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='white' stroke-dasharray='16' stroke-dashoffset='16' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath d='M5 12h14'%3E%3Canimate fill='freeze' attributeName='stroke-dashoffset' dur='0.4s' values='16;0'/%3E%3C/path%3E%3Cpath d='M12 5v14'%3E%3Canimate fill='freeze' attributeName='stroke-dashoffset' begin='0.4s' dur='0.4s' values='16;0'/%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+}
+
+
 /*BOTÓ BORRAR*/
 .buttondelete{
     display: inline-block;
@@ -452,14 +472,98 @@ body{
 }
 
 .bloc_jugar{
+    display: flex;
+    gap: 1.3em;
+    margin-top: 0.5em;
+}
+
+
+.bloccanco_jugar{
+    font-size: 20px;
+    color: whitesmoke;
+    font-family: 'Press Start 2P';
+    text-align: center;
+    margin-top: 1em;
+    padding-bottom: 0.5em;
+    border-bottom: 0.1em solid pink;
+}
+
+
+.blocjugar_jugar{
+    font-size: 20px;
+    color: whitesmoke;
+    font-family: 'Press Start 2P';
+    margin-top: 1em;
+    
+}
+
+
+.blocpuntuacio_jugar{
+    font-size: 20px;
+    color: whitesmoke;
+    font-family: 'Press Start 2P';
+    text-align: center;
+    margin-top: 1em;
+    padding-bottom: 0.5em;
+    border-bottom: 0.1em solid pink;
+}
+
+
+.blocdreta_jugar{
     background-color: rgba(0, 0, 0, 0.494);
     border: 0.1em solid pink;
     border-radius: 1em;
-    width: 80%;
-    height: 28em;
-    overflow-y: auto;
-    overflow-x: hidden;
-    display: grid; 
-    grid-template-columns: repeat(3, 13.6em); 
-    margin-left: 9.6em;
+    width: 23%;
+    height: 40em;
+}
+
+.bloccentre_jugar{
+    background-color: rgba(0, 0, 0, 0.494);
+    border: 0.1em solid pink;
+    border-radius: 1em;
+    width: 60%;
+    height: 40em;
+    justify-content: center;
+    align-items: center;
+}
+
+.blocesquerra_jugar{
+    background-color: rgba(0, 0, 0, 0.494);
+    border: 0.1em solid pink;
+    border-radius: 1em;
+    width: 23%;
+    height: 40em;
+}
+
+
+.caratula_bloc_jugar{
+    border-radius: 8px;
+    width: 15em;
+    height: 15em;
+    border: 0.15em solid rgba(137, 43, 226, 0.378);
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2.3em;
+    display: flex;
+    margin-top: 1em;
+}
+
+.titol_bloccentral_jugar{
+    font-size: 20px;
+    color: whitesmoke;
+    font-family: 'Press Start 2P';
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.artista_blocdreta_jugar{
+    font-size: 20px;
+    color: whitesmoke;
+    font-family: 'Press Start 2P';
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
 }

@@ -1,19 +1,19 @@
 <?php
-// Archivo JSON
+/**json */
 $jsonFile = 'Data.json';
 
-// Llegir el contingut de l'arxiu JSON
+/**llegeix el contingut del json */
 $jsonData = file_get_contents($jsonFile);
 
-// Decodificar el JSON en un array associatiu de PHP
+/**decodifica el json en un array de PHP*/
 $Cancons = json_decode($jsonData, true);
 
-// Obtenir l'ID de la cançó des de la URL
+/**obte id del array desde url */
 $id = isset($_GET['id']) ? $_GET['id'] : '';
 $titol = '';
 $artista = "";
 
-// Recorrem totes les cançons per trobar la que coincideix amb l'ID
+/**recorre totes les cancons per trovar la que tingui la mateixa id */
 foreach ($Cancons as $canco) {
     if ($canco["ID"] == $id) {
         $titol = $canco["Titol:"];
@@ -21,7 +21,7 @@ foreach ($Cancons as $canco) {
     }
 }
 
-// Aquí es fa una substitució dels espais per &nbsp; per conservar-los a la URL
+/**Aquí es fa una substitució dels espais per &nbsp; per conservar-los a la URL */
 $titol1 = str_replace(' ', '&nbsp;', $titol);
 $artist1 = str_replace(' ', '&nbsp;', $artista);
 ?>
@@ -40,14 +40,14 @@ $artist1 = str_replace(' ', '&nbsp;', $artista);
             const fileJoc = document.getElementById('fjoc').value;
             const description = document.getElementById('descripcio').value;
 
-            // Si ambos campos están llenos, evitar el envío del formulario y mostrar un mensaje de error
+            /**si els dos camps (descripcio) i (fitxer de joc), executa el event. el && es un i */
             if (fileJoc && description) {
-                event.preventDefault(); // Evitar que el formulario se envíe
-                alert("Error: Debes elegir solo uno de los campos: 'Fitxer de joc' o 'Descripció'."); // Mensaje de error
-                return false; // Opcional, para mayor claridad
+                event.preventDefault(); /**evita que el formulari senvii */
+                alert("NOMES POTS ESCOLLIR UN CAMP: 'FITXER JOC' O 'DESCRIPCIO'.");
+                return false;
             }
 
-            return true; // O puedes omitir esto, ya que no se usará en este contexto
+            return true;
         }
     </script>
 </head>
@@ -62,8 +62,8 @@ $artist1 = str_replace(' ', '&nbsp;', $artista);
             AFEGIR CANÇONS<br>
 
             <ul class="song_ul">
-                <li class="song_ul_li">Títol: <input class="song_ul_li_titol" type="text" name="titol" maxlength="25" required value="<?= htmlspecialchars($titol1) ?>"></li><br>
-                <li class="song_ul_li">Artista: <input class="song_ul_li_artista" type="text" name="artista" maxlength="15" value="<?= htmlspecialchars($artist1) ?>"></li><br>
+                <li class="song_ul_li">Títol<input class="song_ul_li_titol" type="text" name="titol" input maxlength="25" required value=<?=$titol1?>></textarea><br></li>
+                <li class="song_ul_li">Artista<input class="song_ul_li_artista" type="text" name="artista" input maxlength="15" value=<?=($artist1)?>></textarea><br></li>
                 <li class="song_ul_li">Música (.mp3): <input type="file" name="fmusic" id="fmusic" accept="audio/*" required></li><br>
                 <li class="song_ul_li">Caràtula: <input type="file" name="fcarat" accept="image/*" required></li><br>
                 <li class="song_ul_li">Descripció: <input class="song_ul_li_descripcio" type="text" name="descripcio" id="descripcio" maxlength="1000" rows="4" cols="50"></li><br>
