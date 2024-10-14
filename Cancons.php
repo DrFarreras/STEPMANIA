@@ -1,13 +1,13 @@
 <?php
-// Cargar el archivo JSON
+/* CARREGAR EL JSON */
 $json = file_get_contents("data.json");
 $Cancons = json_decode($json, true);
 
-// Verificar si se quiere eliminar una canción
+/**VERIFICAR SI ES VOL ELIMINAR UNA CANCO */
 if (isset($_GET['delete'])) {
     $idToDelete = $_GET['delete'];
 
-    // Buscar la canción por su ID y eliminarla
+    /*BUSCAR LA CANCO A PARTIR DEL ID I ELIMINARLA*/
     foreach ($Cancons as $key => $canco) {
         if ($canco['ID'] === $idToDelete) {
             // Eliminar archivos relacionados
@@ -21,20 +21,21 @@ if (isset($_GET['delete'])) {
                 unlink("Uploads/joc/" . $canco["Joc:"]);
             }
 
-            // Eliminar la canción del array
+            /*ELIMINAR LA CANCO DEL ARRAY CANCONS*/
             unset($Cancons[$key]);
         }
     }
 
-    // Guardar el JSON actualizado
-    $json = json_encode(array_values($Cancons)); // Re-indexar el array
+    /*GUARDAR EL JSON ACTUALITZAT*/
+    $json = json_encode(array_values($Cancons)); 
     file_put_contents("data.json", $json);
 
-    // Redirigir de nuevo a la lista
+    /*UNA VEGADA ES FA UNA ACCIO, ES REDIRIGEIX A CANCONS.PHP DE NOU*/
     header("Location: Cancons.php");
     exit();
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -66,11 +67,12 @@ if (isset($_GET['delete'])) {
         </div>
     </div>
 
+
     <div class="lista_pantalla_jugar">
         <?php foreach ($Cancons as $canco) {
             $titol = $canco["Titol:"];
             $artista = $canco["Artista:"];
-            $id=$canco["ID"];
+            $id = $canco["ID"];
         ?>
             <div class="bloc_esquerra_caratula">
                 <img class="caratula_canco_jugar" src="Uploads/imatge/<?php echo $canco["Caratula:"]; ?>" alt="Carátula">
@@ -89,7 +91,7 @@ if (isset($_GET['delete'])) {
                     <a href='Cancons.php?delete=<?= urlencode($canco["ID"]) ?>' class="buttondelete" onclick="return confirm('Vols eliminar aquesta cançó?')"></a>
                 </div>
                 <div class="boto_jugar_pantalla_jugar">
-                <a href="" class="buttonplay"></a>
+                <a href="jugar.php" class="buttonplay"></a>
                 </div>
             </div>
         <?php } ?>

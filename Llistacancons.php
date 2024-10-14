@@ -21,7 +21,7 @@
 </body>
 </html>
 
-<?php       /*Fem un php per poder fer que el formulario envii les dades al json*/
+<?php       /*Fem un php per poder fer que el formulari envii les dades al json*/
 $json = file_get_contents("data.json"); 
 $Cancons = json_decode($json, true); /*El arxiu converteix el contingut en un array php*/
 

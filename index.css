@@ -451,3 +451,15 @@ body{
     margin-left: 4em;
 }
 
+.bloc_jugar{
+    background-color: rgba(0, 0, 0, 0.494);
+    border: 0.1em solid pink;
+    border-radius: 1em;
+    width: 80%;
+    height: 28em;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: grid; 
+    grid-template-columns: repeat(3, 13.6em); 
+    margin-left: 9.6em;
+}
