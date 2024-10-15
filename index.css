@@ -515,6 +515,10 @@ body{
     border-radius: 1em;
     width: 23%;
     height: 40em;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    display: flex;
 }
 
 .bloccentre_jugar{
@@ -533,6 +537,10 @@ body{
     border-radius: 1em;
     width: 23%;
     height: 40em;
+    display: flex; /* Cambiar a flex para centrar los elementos */
+    flex-direction: column; /* Organiza los elementos en una columna */
+    align-items: center;
+    gap: 1em;
 }
 
 
@@ -545,8 +553,6 @@ body{
     text-align: center;
     flex-direction: column;
     justify-content: center;
-    margin-left: 2.3em;
-    display: flex;
     margin-top: 1em;
 }
 
@@ -567,3 +573,11 @@ body{
     align-items: center;
     flex-direction: column;
 }
+
+
+.reproductor_blocdreta_jugar{
+    width: 200px;
+}
+
+
+
