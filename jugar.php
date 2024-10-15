@@ -54,6 +54,8 @@ if ($cancoSeleccionada === null) {
             <audio controls class="reproductor_blocdreta_jugar">
                 <source src="Uploads/canco/<?php echo htmlspecialchars($cancoSeleccionada['Canco:']); ?>" type="audio/mpeg">
             </audio>
+            
+
         </div>
         <div class="bloccentre_jugar">
             <div class="blocjugar_jugar">
@@ -64,82 +66,133 @@ if ($cancoSeleccionada === null) {
                     <div id="down" class="square"><img src="fletxes/fletxa_abaix.png" alt="Avall"></div>
                     <div id="left" class="square"><img src="fletxes/fletxa_esquerra.png" alt="Esquerra"></div>
                 </div>
+                <!-- Barra de progreso -->
+            <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+            </div>
                 <!-- Botón para iniciar el juego -->
-                <button class="start-button" onclick="startGame()">Començar Joc</button>
+                <button class="start-button" onclick="startGame()">START</button>
                 <script>
-                    const scoreDisplay = document.getElementById('points');
-                    const squares = {
-                        up: document.getElementById('up'),
-                        down: document.getElementById('down'),
-                        left: document.getElementById('left'),
-                        right: document.getElementById('right')
-                    };
-                    let score = 0;
-                    let isPaused = true;
-                    let activeSquare = null;
-                    let audio = document.getElementById('background-audio');
+    const scoreDisplay = document.getElementById('points');
+    const squares = {
+        up: document.getElementById('up'),
+        down: document.getElementById('down'),
+        left: document.getElementById('left'),
+        right: document.getElementById('right')
+    };
+    let score = 0;
+    let isPaused = true;
+    let activeSquare = null;
+    let intervalId = null;
+    let timeoutId = null;
 
-                    function randomSquare() {
-                        const directions = ['up', 'down', 'left', 'right'];
-                        return directions[Math.floor(Math.random() * 4)];
-                    }
+    // Obtener el elemento de audio, la barra de progreso y el botón de inicio
+    const audio = document.querySelector('audio');
+    const progressBar = document.getElementById('progress-bar');
+    const startButton = document.querySelector('.start-button');
 
-                    function activateSquare() {
-                        if (isPaused || activeSquare) return;
-                        const direction = randomSquare();
-                        activeSquare = squares[direction];
-                        const img = activeSquare.querySelector('img');
-                        img.style.display = 'block';
+    const keyMap = {
+        'ArrowUp': 'up',
+        'ArrowDown': 'down',
+        'ArrowLeft': 'left',
+        'ArrowRight': 'right'
+    };
 
-                        setTimeout(() => {
-                            if (activeSquare) {
-                                updateScore(-50);
-                                deactivateSquare();
-                            }
-                        }, 1000);
-                    }
+    function randomSquare() {
+        const directions = ['up', 'down', 'left', 'right'];
+        return directions[Math.floor(Math.random() * 4)];
+    }
 
-                    function deactivateSquare() {
-                        if (activeSquare) {
-                            const img = activeSquare.querySelector('img');
-                            img.style.display = 'none';
-                            activeSquare = null;
-                        }
-                    }
+    function activateSquare() {
+        if (isPaused || activeSquare) return;
 
-                    function updateScore(amount) {
-                        score += amount;
-                        scoreDisplay.innerText = score;
-                    }
+        const direction = randomSquare();
+        activeSquare = squares[direction];
+        const img = activeSquare.querySelector('img');
+        img.style.display = 'block';
 
-                    function startGame() {
-                        isPaused = false;
-                        audio.play();
+        timeoutId = setTimeout(() => {
+            if (activeSquare) {
+                updateScore(-50); // Penaliza si no se presiona a tiempo
+                deactivateSquare();
+            }
+        }, 1000); // Tiempo para pulsar la flecha
+    }
 
-                        setInterval(activateSquare, 1500);
-                    }
+    function deactivateSquare() {
+        if (activeSquare) {
+            const img = activeSquare.querySelector('img');
+            img.style.display = 'none';
+            activeSquare = null;
+            clearTimeout(timeoutId); // Evita que el timeout siga si se desactiva antes
+        }
+    }
 
-                    document.addEventListener('keydown', (event) => {
-                        if (isPaused || !activeSquare) return;
+    function updateScore(amount) {
+        score += amount;
+        scoreDisplay.innerText = score;
+    }
 
-                        const keyMap = {
-                            'ArrowUp': 'up',
-                            'ArrowDown': 'down',
-                            'ArrowLeft': 'left',
-                            'ArrowRight': 'right'
-                        };
+    // Iniciar el juego cuando se presiona el botón
+    function startGame() {
+        isPaused = false;
 
-                        const pressedKey = keyMap[event.key];
-                        if (pressedKey) {
-                            if (activeSquare.id === pressedKey) {
-                                updateScore(100);
-                            } else {
-                                updateScore(-50);
-                            }
-                            deactivateSquare();
-                        }
-                    });
-                </script>
+        // Reproducir la canción
+        audio.play();
+
+        // Iniciar el intervalo para las flechas
+        intervalId = setInterval(activateSquare, 1500); // Aparece una nueva flecha cada 1.5 segundos
+
+        // Cuando la canción termine, acabar el juego
+        audio.addEventListener('ended', endGame);
+
+        // Actualizar la barra de progreso en tiempo real
+        audio.addEventListener('timeupdate', updateProgressBar);
+
+        // Desaparecer el botón de inicio
+        startButton.classList.add('hidden');
+    }
+
+    // Finaliza el juego cuando la canción se acaba
+    function endGame() {
+        isPaused = true;
+        clearInterval(intervalId); // Detiene la generación de flechas
+        deactivateSquare(); // Desactiva la flecha activa
+
+        // Mostrar mensaje de fin de juego
+        alert("La canción ha terminado. Puntuación final: " + score);
+    }
+
+    // Actualizar la barra de progreso
+    function updateProgressBar() {
+        const currentTime = audio.currentTime; // Tiempo actual de la canción
+        const duration = audio.duration; // Duración total de la canción
+
+        if (!isNaN(duration)) { // Evitar errores si la duración no está disponible
+            const progressPercent = (currentTime / duration) * 100;
+            progressBar.style.width = `${progressPercent}%`;
+        }
+    }
+
+    // Manejo del evento keydown para detectar flechas del teclado
+    document.addEventListener('keydown', (event) => {
+        if (isPaused || !activeSquare) return;
+
+        const pressedKey = keyMap[event.key];
+
+        if (pressedKey) {
+            if (activeSquare.id === pressedKey) {
+                updateScore(100); // Acierto
+            } else {
+                updateScore(-50); // Error
+            }
+            deactivateSquare();
+        }
+    });
+</script>
+
+
+
 </body>
 
 </html>

@@ -526,7 +526,7 @@ body{
     border: 0.1em solid pink;
     border-radius: 1em;
     width: 60%;
-    height: 40em;
+    height: 36.25em;
     justify-content: center;
     align-items: center;
 }
@@ -580,4 +580,85 @@ body{
 }
 
 
+
+.progress-container {
+    width: 100%;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: #4caf50;
+    transition: width 0.1s;
+}
+
+
+/* Para colocar la puntuación debajo del texto "Puntuació" */
+.blocpuntuacio_jugar {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#points {
+    font-size: 32px;
+    margin-top: 10px;
+}
+
+/* Para hacer que la barra de progreso esté en la parte inferior del contenedor del centro */
+.bloccentre_jugar {
+    position: relative; /* Necesario para posicionar elementos dentro de este contenedor */
+    padding-bottom: 60px; /* Deja espacio para la barra y el botón */
+}
+
+.progress-container {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.start-button {
+    position: absolute;
+    bottom: 40px; /* Ajuste para que el botón esté encima de la barra de progreso */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(100, 104, 107, 0.904);
+    color: whitesmoke;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+/* Desaparece el botón cuando se hace clic */
+.start-button.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Estilo para las flechas, oculta inicialmente */
+/* Estilo para las imágenes de las flechas */
+.square img {
+    display: none;                  /* Cambiar a block para que se pueda centrar correctamente */
+    width: 300px;                    /* Ajusta el tamaño según sea necesario */
+    height: auto;                   /* Mantiene la proporción */
+}
+
+/* Contenedor de las flechas */
+.square {
+    display: flex;                   /* Habilita Flexbox */
+    justify-content: center;         /* Centra horizontalmente */
+    align-items: center;             /* Centra verticalmente */
+    gap: 10px;                       /* Espacio entre las flechas, ajusta según necesites */
+}
 
