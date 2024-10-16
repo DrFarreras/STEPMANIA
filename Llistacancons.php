@@ -8,11 +8,11 @@
 
 </head>
 <body>
-    <form action="Llistacancons.php" method="Post" enctype="multipart/form-data"> <!-- Canviem el metode i afegim el enctype per pujar arxius-->   
+    <form action="llistacancons.php" method="Post" enctype="multipart/form-data"> <!-- Canviem el metode i afegim el enctype per pujar arxius-->   
     
     <div class="Botonshomereturn"> <!-- Fem un class dels botons enllaçats amb les seves pàgines corresponents-->
 
-        <a href='Afegircancons.php' class="buttonreturn"></a><br>
+        <a href='afegircancons.php' class="buttonreturn"></a><br>
         <a href='index.html' class="buttonhome"></a><br>
 
     </div>
@@ -43,7 +43,7 @@ $Canco = [  /**Crea una array amb la nova informació enviada desde el formulari
     if (move_uploaded_file($_FILES["fmusic"]["tmp_name"], "Uploads/canco/". $Canco["Canco:"]) && /**Moguem els arxius separats en les carpetes que pertanyin */
     move_uploaded_file($_FILES["fcarat"]["tmp_name"], "Uploads/imatge/". $Canco["Caratula:"]) &&
     move_uploaded_file($_FILES["fjoc"]["tmp_name"], "Uploads/joc/". $Canco["Joc:"]));
-    header("location:Cancons.php"); /**fem un header location per redirigir al usuari a la pagina de jugar quan afegeixi una canco */
+    header("location:cancons.php"); /**fem un header location per redirigir al usuari a la pagina de jugar quan afegeixi una canco */
 
 
 ?>

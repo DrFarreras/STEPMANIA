@@ -31,7 +31,7 @@ if (isset($_GET['delete'])) {
     file_put_contents("data.json", $json);
 
     /*UNA VEGADA ES FA UNA ACCIO, ES REDIRIGEIX A CANCONS.PHP DE NOU*/
-    header("Location: Cancons.php");
+    header("Location: cancons.php");
     exit();
 }
 ?>
@@ -47,7 +47,7 @@ if (isset($_GET['delete'])) {
 </head>
 <body>
     <div class="Botonshomereturn"> <!-- Fem un class dels botons enllaçats amb les seves pàgines corresponents-->
-        <a href='Afegircancons.php' class="buttonadd"></a><br>
+        <a href='afegircancons.php' class="buttonadd"></a><br>
         <a href='index.html' class="buttonhome"></a><br>
     </div>
 
@@ -86,10 +86,10 @@ if (isset($_GET['delete'])) {
             </div>
             <div class="buttonedit_delete_play">
                 <div class="boto_editar_pantalla_jugar">
-                    <a href='Afegircancons.php?id=<?=$id?>' class="buttonedit"></a>
+                    <a href='afegircancons.php?id=<?=$id?>' class="buttonedit"></a>
                 </div>
                 <div class="boto_borrar_pantalla_jugar">
-                    <a href='Cancons.php?delete=<?= urlencode($canco["ID"]) ?>' class="buttondelete" onclick="return confirm('Vols eliminar aquesta cançó?')"></a>
+                    <a href='cancons.php?delete=<?= urlencode($canco["ID"]) ?>' class="buttondelete" onclick="return confirm('Vols eliminar aquesta cançó?')"></a>
                 </div>
                 <div class="boto_jugar_pantalla_jugar">
                     <a href="jugar.php?id=<?= urlencode($canco["ID"]) ?>" class="buttonplay"></a>

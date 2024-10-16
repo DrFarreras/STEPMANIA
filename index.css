@@ -593,7 +593,7 @@ body{
 .progress-bar {
     height: 100%;
     width: 0;
-    background-color: #4caf50;
+    background-color: #4c51af;
     transition: width 0.1s;
 }
 
@@ -610,25 +610,26 @@ body{
     margin-top: 10px;
 }
 
-/* Para hacer que la barra de progreso esté en la parte inferior del contenedor del centro */
+/*barra de progres abaix al centre*/
 .bloccentre_jugar {
-    position: relative; /* Necesario para posicionar elementos dentro de este contenedor */
-    padding-bottom: 60px; /* Deja espacio para la barra y el botón */
+    position: relative; /*per posar elements dins del contenidor*/
+    padding-bottom: 60px; /*deixa espai per la barra i el boto*/
 }
 
 .progress-container {
     position: absolute;
     bottom: 10px;
-    width: 100%;
+    width: 90%;
     height: 20px;
     background-color: #e0e0e0;
     border-radius: 10px;
     overflow: hidden;
+    right: 2.1em;    
 }
 
 .start-button {
     position: absolute;
-    bottom: 40px; /* Ajuste para que el botón esté encima de la barra de progreso */
+    bottom: 40px; 
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(100, 104, 107, 0.904);
@@ -640,25 +641,24 @@ body{
     transition: opacity 0.3s;
 }
 
-/* Desaparece el botón cuando se hace clic */
+/*desapareix el boto al fer click*/
 .start-button.hidden {
     opacity: 0;
     visibility: hidden;
 }
 
-/* Estilo para las flechas, oculta inicialmente */
-/* Estilo para las imágenes de las flechas */
+/*estil per les fletxes*/
 .square img {
-    display: none;                  /* Cambiar a block para que se pueda centrar correctamente */
-    width: 300px;                    /* Ajusta el tamaño según sea necesario */
-    height: auto;                   /* Mantiene la proporción */
+    display: none; /*oculta automaticament al inici les fletxes*/   
+    width: 300px;                    
+    height: auto;                   
 }
 
 /* Contenedor de las flechas */
 .square {
-    display: flex;                   /* Habilita Flexbox */
-    justify-content: center;         /* Centra horizontalmente */
-    align-items: center;             /* Centra verticalmente */
-    gap: 10px;                       /* Espacio entre las flechas, ajusta según necesites */
+    display: flex;                   
+    justify-content: center;         
+    align-items: center;             
+    gap: 10px;                       
 }
 

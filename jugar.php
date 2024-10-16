@@ -35,7 +35,7 @@ if ($cancoSeleccionada === null) {
 
 <body>
     <div class="Botonshomereturn">
-        <a href='Cancons.php' class="buttonreturn"></a><br>
+        <a href='cancons.php' class="buttonreturn"></a><br>
         <a href='index.html' class="buttonhome"></a><br>
     </div>
 
@@ -66,6 +66,7 @@ if ($cancoSeleccionada === null) {
                     <div id="down" class="square"><img src="fletxes/fletxa_abaix.png" alt="Avall"></div>
                     <div id="left" class="square"><img src="fletxes/fletxa_esquerra.png" alt="Esquerra"></div>
                 </div>
+                
                 <!-- Barra de progreso -->
             <div class="progress-container">
             <div class="progress-bar" id="progress-bar"></div>
@@ -160,7 +161,7 @@ if ($cancoSeleccionada === null) {
         deactivateSquare(); // Desactiva la flecha activa
 
         // Mostrar mensaje de fin de juego
-        alert("La canción ha terminado. Puntuación final: " + score);
+        alert("Puntuació final: " + score);
     }
 
     // Actualizar la barra de progreso
