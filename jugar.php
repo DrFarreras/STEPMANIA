@@ -58,7 +58,6 @@ if ($cancoSeleccionada === null) {
 
         <div class="bloccentre_jugar">
             <div class="blocjugar_jugar">
-                <div id="score">PUNTUACIO: <span id="points">0</span></div>
                 <div id="game-area">
                     <div id="up" class="square"><img src="fletxes/fletxa_adalt.png" alt="amunt"></div>
                     <div id="right" class="square"><img src="fletxes/fletxa_dreta.png" alt="dreta"></div>
@@ -80,7 +79,10 @@ if ($cancoSeleccionada === null) {
         </div>
 
         <div class="blocdreta_jugar">
-            <div class="blocpuntuacio_jugar">PUNTUACIO</div>
+            <div class="blocpuntuacio_jugar">PUNTUACIO
+            <div id="score"><span id="points">0</span></div>
+
+            </div>
         </div>
     </div>
 
