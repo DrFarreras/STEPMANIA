@@ -398,17 +398,14 @@ button:hover {
 /*EL TITOL JUGADOR DE LA TAULA CLASSIFICACIO*/
 .jugador_classificacio{
     margin-top: 1em;
-    margin-left: 3.5em;
-    text-decoration: underline;
+    height: 2em;
 }
 
 
 /*EL TITOL PUNTUACIO DE LA TAULA CLASSIFICACIO*/
 .puntuacio_classificacio{
     margin-top: 1em;
-    margin-right: 3.5em;
-    text-decoration: underline;
-
+    height: 2em;
 }
 
 
@@ -537,8 +534,8 @@ body{
     border-radius: 1em;
     width: 23%;
     height: 40em;
-    display: flex; /* Cambiar a flex para centrar los elementos */
-    flex-direction: column; /* Organiza los elementos en una columna */
+    display: flex; /* Cambiar a flex per centrar els elements */
+    flex-direction: column; /* Organitza els elements en una columna */
     align-items: center;
     gap: 1em;
 }
@@ -598,7 +595,7 @@ body{
 }
 
 
-/* Para colocar la puntuación debajo del texto "Puntuació" */
+/* Per colocar la puntuacio abaix del text puntuacio*/
 .blocpuntuacio_jugar {
     font-size: 24px;
     margin-bottom: 10px;
@@ -662,3 +659,56 @@ body{
     gap: 10px;                       
 }
 
+
+/* index.css */
+ul {
+    list-style-type: none; /* elimina les vinyetes */
+    padding: 0;           /* elimina el reompliment de la llista */
+    margin: 0;            /* elimina el marge de la llista */
+}
+
+.classificacions_taula_punts {
+    display: flex; /* per alinear els elements horitzontalment */
+    justify-content: space-between; /* espai entre els elements */
+    margin-bottom: 1em; /* espai inferior */
+}
+
+.score_entry {
+    display: flex; /* per alinear el nom i la puntuacio en una fila */
+    justify-content: space-between; /* espai entre nom i puntuacio */
+    margin-bottom: 0.5em; /* espai inferior entre cada entrada */
+}
+
+.player_classificacions {
+    flex: 1; /* permet que ocupi l'espai disponible */
+    font-size: 20px;
+    color: whitesmoke;
+    font-family: 'Press Start 2P';
+    margin-bottom: 2em;
+    margin-top: 1em;
+    margin-left:2em;
+}
+
+.score_classificacions {
+    flex: 1; /* permet que ocupi l'espai disponible */
+    font-size: 20px;
+    color: whitesmoke;
+    font-family: 'Press Start 2P';
+    margin-bottom: 2em;
+    margin-top: 1em;
+}
+
+.punt_class, .juga_class{
+    text-decoration: underline;
+}
+
+.juga_class{
+    margin-left: 3.5em;
+    margin-bottom: 1.5em;
+}
+
+.punt_class{
+    margin-right: 3.5em;
+    margin-bottom: 1.5em;
+
+}
